@@ -1,0 +1,30 @@
+@mixin nav_hover
+    &:hover
+        background-color: #fff
+        .nav__link
+            color: #000
+            svg
+                fill: #000
+
+@mixin nav_active
+    &-active 
+        background-color: #fff
+        .nav__link
+            color: #000
+            svg
+                fill: #000
+
+@mixin link_underline
+    &::after
+        content: ""
+        display: block
+        background-color: #000
+        width: 0
+        height: 1px
+        transition: width 0.5s ease-in-out
+    &:hover::after
+        width: 100%
+    &-logo
+        &::after
+            display: none
+
