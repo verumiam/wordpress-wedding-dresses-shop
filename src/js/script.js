@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    // BodyMovin, documentation: https://github.com/airbnb/lottie-web
     const animation = bodymovin.loadAnimation({
         container: document.querySelector('#logo-video'),
         rederer: 'svg',
@@ -30,4 +31,18 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Slick-slider, documentation: https://kenwheeler.github.io/slick/
+
+    $('.preview__slider_wrapper').slick({
+        infinite: true,
+        adaptiveHeight: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        arrows: false,
+        dots: false
+      });
+
 });
