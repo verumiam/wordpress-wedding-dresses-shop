@@ -28,6 +28,81 @@
         &::after
             display: none
 
+@mixin any_title
+    text-align: center
+    font-weight: 600   
+    font-size: 26px
+    text-shadow: 2px 2px 10px #ced4da
+    margin: 0 0 10px 0
+
+@mixin slider_border
+    &::before
+        content: ""
+        display: block
+        width: 10px
+        height: 100%
+        background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0))
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+    &::after
+        content: ""
+        display: block
+        width: 10px
+        height: 100%
+        background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0))
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 1
+
+@mixin slider_dots
+    .slick-dots
+        display: flex
+        margin: 0
+        padding: 0
+        list-style: none
+        position: absolute
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 3
+        button
+            display: block
+            background: #ced4da
+            color: transparent
+            margin: 0 5px 0 5px
+            padding: 1px 10px 1px 10px
+            cursor: pointer
+            font-size: 0
+            border: 0
+            transition: background 0.6s linear
+            &:hover
+                background: #000
+        li.slick-active
+                button
+                    background: #000
+
+@mixin slider_arrows
+    .slick-prev
+        position: absolute
+        left: -20px
+        z-index: 10
+        height: 100%
+        background-image: linear-gradient(to left, #ced4da, rgba(255, 255, 255, 0))
+    .slick-next
+        position: absolute
+        right: -20px
+        z-index: 10
+        height: 100%
+        background-image: linear-gradient(to right, #ced4da, rgba(255, 255, 255, 0))
+    .slick-arrow
+        color: transparent
+        font-size: 0
+        border: 0
+        width: 10px
+
 @mixin item_underline
     &::after
         content: ""
