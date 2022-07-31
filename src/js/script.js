@@ -34,17 +34,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     // Slick-slider, documentation: https://kenwheeler.github.io/slick/
-
     $('.preview__slider_wrapper').slick({
         infinite: true,
         adaptiveHeight: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 6000,
         arrows: false,
         dots: true,
         pauseOnDotsHover: true,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     // Modal help with size of the wedding dress
@@ -66,7 +91,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Modal close with animation
-
     $('[data-modal-close]').on('click', function(e) {
         e.preventDefault();
 
@@ -95,11 +119,36 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 300);
     };
 
-    // Size calculator
+    // Help with size
 
-    let inputBust = document.querySelector('.input--bust'),
-        inputWaist = document.querySelector('.input--waist'),
-        inputGirth = document.querySelector('input--girth');
+    // Converting size properties into JSON list
+    // const formBtn = document.querySelector('#helpBtn'),
+    //       formSize = document.querySelector('#formSize');
+
+    // formBtn.addEventListener('click', function() {
+    //     let inputBust = document.querySelector('.input--bust'),
+    //         inputWaist = document.querySelector('.input--waist'),
+    //         inputHips = document.querySelector('.input--hips');
+
+    //     function formSize(obj) {
+    //         this.bust = obj.bust;
+    //         this.waist = obj.waist;
+    //         this.hips = obj.hips;
+    //     }
+
+    //     let bust = inputBust.value,
+    //         waist = inputWaist.value,
+    //         hips = inputHips.value;
+
+    //     let sizes = new formSize({
+    //         bust: bust,
+    //         waist: waist,
+    //         hips: hips
+    //     });
+
+    //     console.log(JSON.stringify(sizes));
+        
+    // });
 
     // Function to convert html table into json data
 

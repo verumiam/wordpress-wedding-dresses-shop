@@ -126,23 +126,31 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <nav class="nav" id="nav">
-                    <a href="#" class="nav__link nav__link-logo"><svg><use xlink:href="#logo-company"></use></svg></a>
-                    <a href="#" class="nav__link">Collections</a>
-                    <a href="#" class="nav__link">Shopping cart</a>
-                    <a href="#" class="nav__link">Blog</a>
-                    <a href="#" class="nav__link">About us</a>
-                    <a href="#" class="nav__link">Contacts</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+                <ul class="nav" id="nav">
+                    <li class="nav__link nav__link-logo"><a href="index.html"><svg><use xlink:href="#logo-company"></use></svg></a></li>
+                    <li  class="nav__link nav__link-collections"><a href="collections.html">Collections</a>
+                    <ul class="nav__link-collections-list">
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="#">Lorem ipsum</a></li>
+                    </ul></li>
+                    <li class="nav__link"><a href="#">Shopping cart</a></li>
+                    <li class="nav__link"><a href="#">Blog</a></li>
+                    <li class="nav__link"><a href="#">About us</a></li>
+                    <li class="nav__link"><a href="#">Contacts</a></li>
+                </ul> <!-- /.nav -->
+            </div> <!-- /.header__inner -->
+        </div> <!-- /.container -->
+    </header> <!-- /.header --> 
 
     <section class="promo" id="promo">
             <div class="promo__wrapper" id="logo-video">
                 <video class="promo__wrapper-video" autoplay muted loop src="video/women-bg.mp4"></video>
-            </div>
-    </section>
+            </div> <!-- /.promo__wrapper -->
+    </section> <!-- /.promo -->
 
     <section class="describe">
         <div class="container">
@@ -157,17 +165,32 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div> <!-- /.container -->
+    </section> <!-- /.describe -->
 
     <section class="preview">
-        <div class="container">
+        <div class="container-fluid">
             <h3 class="preview__title">New collection "Lorem Ipsum"</h3>
             <div class="preview__slider">
                 <div class="preview__slider_wrapper">
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-1.jpg" alt="">
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-1.jpg" alt="">
+                        <div class="preview__slider-title">Lorem ipsum</div>
+                        <div class="preview__slider-price">499&#8364</div>
+                        <div class="preview__slider-buy">
+                            <div class="preview__slider-purchase">
+                                <div class="preview__slider-purchase_subtitle">Add to cart</div>
+                                <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
+                            </div>
+                            <div class="preview__slider-heart">
+                                <div class="preview__slider-heart_subtitle">Add to favorite</div>
+                                <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-2.jpg" alt="">
+                        <div class="preview__slider-descr">
                             <div class="preview__slider-title">Lorem ipsum</div>
                             <div class="preview__slider-price">499&#8364</div>
                             <div class="preview__slider-buy">
@@ -182,105 +205,78 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-2.jpg" alt="">
-                            <div class="preview__slider-descr">
-                                <div class="preview__slider-title">Lorem ipsum</div>
-                                <div class="preview__slider-price">499&#8364</div>
-                                <div class="preview__slider-buy">
-                                    <div class="preview__slider-purchase">
-                                        <div class="preview__slider-purchase_subtitle">Add to cart</div>
-                                        <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
-                                    </div>
-                                    <div class="preview__slider-heart">
-                                        <div class="preview__slider-heart_subtitle">Add to favorite</div>
-                                        <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
-                                    </div>
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-3.jpg" alt="">
+                        <div class="preview__slider-descr">
+                            <div class="preview__slider-title">Lorem ipsum</div>
+                            <div class="preview__slider-price">499&#8364</div>
+                            <div class="preview__slider-buy">
+                                <div class="preview__slider-purchase">
+                                    <div class="preview__slider-purchase_subtitle">Add to cart</div>
+                                    <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
+                                </div>
+                                <div class="preview__slider-heart">
+                                    <div class="preview__slider-heart_subtitle">Add to favorite</div>
+                                    <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-3.jpg" alt="">
-                            <div class="preview__slider-descr">
-                                <div class="preview__slider-title">Lorem ipsum</div>
-                                <div class="preview__slider-price">499&#8364</div>
-                                <div class="preview__slider-buy">
-                                    <div class="preview__slider-purchase">
-                                        <div class="preview__slider-purchase_subtitle">Add to cart</div>
-                                        <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
-                                    </div>
-                                    <div class="preview__slider-heart">
-                                        <div class="preview__slider-heart_subtitle">Add to favorite</div>
-                                        <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
-                                    </div>
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-4.jpg" alt="">
+                        <div class="preview__slider-descr">
+                            <div class="preview__slider-title">Lorem ipsum</div>
+                            <div class="preview__slider-price">499&#8364</div>
+                            <div class="preview__slider-buy">
+                                <div class="preview__slider-purchase">
+                                    <div class="preview__slider-purchase_subtitle">Add to cart</div>
+                                    <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
+                                </div>
+                                <div class="preview__slider-heart">
+                                    <div class="preview__slider-heart_subtitle">Add to favorite</div>
+                                    <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-4.jpg" alt="">
-                            <div class="preview__slider-descr">
-                                <div class="preview__slider-title">Lorem ipsum</div>
-                                <div class="preview__slider-price">499&#8364</div>
-                                <div class="preview__slider-buy">
-                                    <div class="preview__slider-purchase">
-                                        <div class="preview__slider-purchase_subtitle">Add to cart</div>
-                                        <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
-                                    </div>
-                                    <div class="preview__slider-heart">
-                                        <div class="preview__slider-heart_subtitle">Add to favorite</div>
-                                        <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
-                                    </div>
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-5.jpg" alt="">
+                        <div class="preview__slider-descr">
+                            <div class="preview__slider-title">Lorem ipsum</div>
+                            <div class="preview__slider-price">499&#8364</div>
+                            <div class="preview__slider-buy">
+                                <div class="preview__slider-purchase">
+                                    <div class="preview__slider-purchase_subtitle">Add to cart</div>
+                                    <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
+                                </div>
+                                <div class="preview__slider-heart">
+                                    <div class="preview__slider-heart_subtitle">Add to favorite</div>
+                                    <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-5.jpg" alt="">
-                            <div class="preview__slider-descr">
-                                <div class="preview__slider-title">Lorem ipsum</div>
-                                <div class="preview__slider-price">499&#8364</div>
-                                <div class="preview__slider-buy">
-                                    <div class="preview__slider-purchase">
-                                        <div class="preview__slider-purchase_subtitle">Add to cart</div>
-                                        <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
-                                    </div>
-                                    <div class="preview__slider-heart">
-                                        <div class="preview__slider-heart_subtitle">Add to favorite</div>
-                                        <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
-                                    </div>
+                    <div class="preview__slider-item">
+                        <img class="preview__slider-img" src="img/slider/slider-6.jpg" alt="">
+                        <div class="preview__slider-descr">
+                            <div class="preview__slider-title">Lorem ipsum</div>
+                            <div class="preview__slider-price">499&#8364</div>
+                            <div class="preview__slider-buy">
+                                <div class="preview__slider-purchase">
+                                    <div class="preview__slider-purchase_subtitle">Add to cart</div>
+                                    <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
+                                </div>
+                                <div class="preview__slider-heart">
+                                    <div class="preview__slider-heart_subtitle">Add to favorite</div>
+                                    <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="preview__slider-item">
-                            <img class="preview__slider-img" src="img/slider/slider-6.jpg" alt="">
-                            <div class="preview__slider-descr">
-                                <div class="preview__slider-title">Lorem ipsum</div>
-                                <div class="preview__slider-price">499&#8364</div>
-                                <div class="preview__slider-buy">
-                                    <div class="preview__slider-purchase">
-                                        <div class="preview__slider-purchase_subtitle">Add to cart</div>
-                                        <img class="preview__slider-purchase_img" src="icons/purchase-buy.svg" alt="">
-                                    </div>
-                                    <div class="preview__slider-heart">
-                                        <div class="preview__slider-heart_subtitle">Add to favorite</div>
-                                        <img class="preview__slider-heart_img" src="icons/purchase-heart.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </div> <!-- /.preview__slider_wrapper -->
+            </div> <!-- /.preview__slider -->
+        </div> <!-- /.container -->
+    </section> <!-- /.preview -->
 
     <section class="help">
         <div class="container">
@@ -296,16 +292,16 @@
                     <div class="col-md-3 offset-md-1">
                         <div class="help__inner-item">
                             <svg class="help__img help__img-dress"><use xlink:href="#dress-logo"></use></svg>
-                            <button type="button" data-modal="#modalHelp" class="help__btn help__btn-size">Sizes</button>
+                            <button type="button" data-modal="#modalHelp" class="help__btn help__btn-size">Size chart</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </div> <!-- /.help__inner -->
+        </div> <!-- /.container -->
+    </section> <!-- /.help -->
 
     <footer class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="footer__inner">
                 <div class="row">
                     <div class="col-md-6">
@@ -320,123 +316,126 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </div> <!-- /.footer__inner -->
+        </div> <!-- /.container -->
+    </footer> <!-- /.footer -->
 
     <div class="modal" id="modalHelp">
         <div class="modal__inner">
             <div class="modal__content">
                 <div class="modal__header">
-                    <div class="modal__header-title">Help with size <p></div>
-                    <div class="modal__header-text">Here you can determine the size of the wedding dress using a calculator and send a question</div>
+                    <div class="modal__header-title">Size chart<p></div>
+                    <div class="modal__header-text">Here you can determine the size of the wedding dress using table</div>
                 </div>
-                <table class="sizetable">
-                    <thead class="sizetable__header">
-                        <tr>
-                            <th>Size (EU)</th>
-                            <th>Size (USA)</th>
-                            <th>Bust (cm)</th>
-                            <th>Waist (cm)</th>
-                            <th>Hips (cm)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="sizetable__body">
-                        <tr>
-                            <td>34</td>
-                            <td>2</td>
-                            <td>80</td>
-                            <td>60</td>
-                            <td>88</td>
-                        </tr>
-                        <tr>
-                            <td>36</td>
-                            <td>4</td>
-                            <td>84</td>
-                            <td>64</td>
-                            <td>92</td>
-                        </tr>
-                        <tr>
-                            <td>38</td>
-                            <td>6</td>
-                            <td>88</td>
-                            <td>68</td>
-                            <td>96</td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td>8</td>
-                            <td>92</td>
-                            <td>72</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>42</td>
-                            <td>10</td>
-                            <td>96</td>
-                            <td>76</td>
-                            <td>104</td>
-                        </tr>
-                        <tr>
-                            <td>44</td>
-                            <td>12</td>
-                            <td>100</td>
-                            <td>80</td>
-                            <td>108</td>
-                        </tr>
-                        <tr>
-                            <td>46</td>
-                            <td>14</td>
-                            <td>104</td>
-                            <td>84</td>
-                            <td>112</td>
-                        </tr>
-                        <tr>
-                            <td>48</td>
-                            <td>16</td>
-                            <td>108</td>
-                            <td>88</td>
-                            <td>116</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>18</td>
-                            <td>112</td>
-                            <td>92</td>
-                            <td>120</td>
-                        </tr>
-                        <tr>
-                            <td>52</td>
-                            <td>20</td>
-                            <td>116</td>
-                            <td>96</td>
-                            <td>124</td>
-                        </tr>
-                        <tr>
-                            <td>54</td>
-                            <td>22</td>
-                            <td>120</td>
-                            <td>100</td>
-                            <td>128</td>
-                        </tr>
-                        <tr>
-                            <td>56</td>
-                            <td>24</td>
-                            <td>124</td>
-                            <td>104</td>
-                            <td>132</td>
-                        </tr>
-                        <tr>
-                            <td>58</td>
-                            <td>26</td>
-                            <td>128</td>
-                            <td>108</td>
-                            <td>136</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="modal__calc">
-                    <form class="form" action="/">
+                <div class="modal__size">
+                    <table class="sizetable">
+                        <thead class="sizetable__header">
+                            <tr>
+                                <th>Size (EU)</th>
+                                <th>Size (USA)</th>
+                                <th>Bust (cm)</th>
+                                <th>Waist (cm)</th>
+                                <th>Hips (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sizetable__body">
+                            <img class="modal__img" src="img/women-size.png">
+                            <tr>
+                                <td>34</td>
+                                <td>2</td>
+                                <td>80</td>
+                                <td>60</td>
+                                <td>88</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>4</td>
+                                <td>84</td>
+                                <td>64</td>
+                                <td>92</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>6</td>
+                                <td>88</td>
+                                <td>68</td>
+                                <td>96</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>8</td>
+                                <td>92</td>
+                                <td>72</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>10</td>
+                                <td>96</td>
+                                <td>76</td>
+                                <td>104</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>12</td>
+                                <td>100</td>
+                                <td>80</td>
+                                <td>108</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>14</td>
+                                <td>104</td>
+                                <td>84</td>
+                                <td>112</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>16</td>
+                                <td>108</td>
+                                <td>88</td>
+                                <td>116</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>18</td>
+                                <td>112</td>
+                                <td>92</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>20</td>
+                                <td>116</td>
+                                <td>96</td>
+                                <td>124</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>22</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>128</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>24</td>
+                                <td>124</td>
+                                <td>104</td>
+                                <td>132</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>26</td>
+                                <td>128</td>
+                                <td>108</td>
+                                <td>136</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="modal__calc">
+                    <form class="form" action="/" id="formSize">
                         <div class="form__group">
                             <input type="text" class="input input--bust" placeholder="Your bust in cm">
                         </div>
@@ -444,20 +443,21 @@
                             <input type="text" class="input input--waist" placeholder="Your waist in cm">
                         </div>
                         <div class="form__group">
-                            <input type="text" class="input input--girth" placeholder="Your girth in cm">
+                            <input type="text" class="input input--hips" placeholder="Your hips in cm">
                         </div>
                     </form>
-                </div>
+                    <button id="helpBtn" class="help__btn help__btn-size">Check size</button>
+                </div> -->
                 <div class="modal__footer">
                     <h4 class="modal__footer-title">Need a help?</h4>
-                    <a class="help__btn help__btn-phone" target="_blank" href="https://api.whatsapp.com/send/?phone=380500194819&text=Hello%2C+i+have+a+question+about">Send message with a question</a>
+                    <a class="help__btn help__btn-phone" target="_blank" href="https://api.whatsapp.com/send/?phone=380500194819&text=Hello%2C+i+have+a+question+about">Send a message with a question</a>
                 </div>
                 <button class="modal__close" data-modal-close>
                     <img src="icons/close.svg" type="button" alt="close">
                 </button>
             </div> <!-- /.modal__content -->
-        </div>
-    </div>
+        </div> <!-- /.modal__inner -->
+    </div> <!-- /.modal -->
 
     <!-- Java Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

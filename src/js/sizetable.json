@@ -1,79 +1,79 @@
 [{
     "size(eu)": "34",
     "size(usa)": "2",
-    "bust(cm)": "80",
-    "waist(cm)": "60",
-    "hips(cm)": "88"
+    "bust": "80",
+    "waist": "60",
+    "hips": "88"
 }, {
     "size(eu)": "36",
     "size(usa)": "4",
-    "bust(cm)": "84",
-    "waist(cm)": "64",
-    "hips(cm)": "92"
+    "bust": "84",
+    "waist": "64",
+    "hips": "92"
 }, {
     "size(eu)": "38",
     "size(usa)": "6",
-    "bust(cm)": "88",
-    "waist(cm)": "68",
-    "hips(cm)": "96"
+    "bust": "88",
+    "waist": "68",
+    "hips": "96"
 }, {
     "size(eu)": "40",
     "size(usa)": "8",
-    "bust(cm)": "92",
-    "waist(cm)": "72",
-    "hips(cm)": "100"
+    "bust": "92",
+    "waist": "72",
+    "hips": "100"
 }, {
     "size(eu)": "42",
     "size(usa)": "10",
-    "bust(cm)": "96",
-    "waist(cm)": "76",
-    "hips(cm)": "104"
+    "bust": "96",
+    "waist": "76",
+    "hips": "104"
 }, {
     "size(eu)": "44",
     "size(usa)": "12",
-    "bust(cm)": "100",
-    "waist(cm)": "80",
-    "hips(cm)": "108"
+    "bust": "100",
+    "waist": "80",
+    "hips": "108"
 }, {
     "size(eu)": "46",
     "size(usa)": "14",
-    "bust(cm)": "104",
-    "waist(cm)": "84",
-    "hips(cm)": "112"
+    "bust": "104",
+    "waist": "84",
+    "hips": "112"
 }, {
     "size(eu)": "48",
     "size(usa)": "16",
-    "bust(cm)": "108",
-    "waist(cm)": "88",
-    "hips(cm)": "116"
+    "bust": "108",
+    "waist": "88",
+    "hips": "116"
 }, {
     "size(eu)": "50",
     "size(usa)": "18",
-    "bust(cm)": "112",
-    "waist(cm)": "92",
-    "hips(cm)": "120"
+    "bust": "112",
+    "waist": "92",
+    "hips": "120"
 }, {
     "size(eu)": "52",
     "size(usa)": "20",
-    "bust(cm)": "116",
-    "waist(cm)": "96",
-    "hips(cm)": "124"
+    "bust": "116",
+    "waist": "96",
+    "hips": "124"
 }, {
     "size(eu)": "54",
     "size(usa)": "22",
-    "bust(cm)": "120",
-    "waist(cm)": "100",
-    "hips(cm)": "128"
+    "bust": "120",
+    "waist": "100",
+    "hips": "128"
 }, {
     "size(eu)": "56",
     "size(usa)": "24",
-    "bust(cm)": "124",
-    "waist(cm)": "104",
-    "hips(cm)": "132"
+    "bust": "124",
+    "waist": "104",
+    "hips": "132"
 }, {
     "size(eu)": "58",
     "size(usa)": "26",
-    "bust(cm)": "128",
-    "waist(cm)": "108",
-    "hips(cm)": "136"
+    "bust": "128",
+    "waist": "108",
+    "hips": "136"
 }]

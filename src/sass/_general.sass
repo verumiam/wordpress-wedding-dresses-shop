@@ -1,5 +1,8 @@
 body.no-scroll
     overflow: hidden
+
+a
+    text-decoration: none
     
 .header
     position: relative
@@ -19,14 +22,33 @@ body.no-scroll
     padding: 30px 70px
     transition: background-color 0.4s linear
     background-color: none
+    list-style: none
     &__link
-        color: #fff
         font-size: 15px
         font-weight: 600
         text-transform: uppercase
         text-decoration: none
         margin-right: 45px
-        transition: color 0.4s linear
+        a
+            transition: color 0.4s linear
+            color: #fff
+        &-collections
+            position: relative
+            &-list
+                display: none
+                position: absolute
+                background-color: #fff 
+                list-style: none
+                padding: 10px
+                top: 24px
+                left: 50%
+                transform: translateX(-50%)
+                min-width: 200px
+                height: auto
+                text-align: center
+                li
+                    padding: 10px 40px 10px 40px
+            @include list_hover
         svg
             display: block
             width: 170px    
@@ -55,6 +77,17 @@ body.no-scroll
             min-height: 56.25vw
             position: absolute
             z-index: -1
+    &__header
+        position: absolute
+        top: 45%
+        transform: translateY(-45%)
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 90px
+        color: #fff
+        text-transform: uppercase
+        
+        
 
 .describe
     min-height: 450px
@@ -80,7 +113,7 @@ body.no-scroll
 
 .preview
     min-height: 450px
-    padding: 0 0 120px 0
+    padding: 0 20px 120px 20px
     &__title
         @include any_title
     &__slider
@@ -125,6 +158,23 @@ body.no-scroll
             &_subtitle
                 font-size: 20px
                 font-weight: 400
+
+.content
+    min-height: 450px
+    padding: 0 20px 0 20px
+    &__title
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 20px
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+    &__item
+        padding: 0 10px 50px 10px
+        @include item_underline 
+    &__img
+        height: auto
+        width: 100%
  
 .help
     min-height: 250px
@@ -168,6 +218,7 @@ body.no-scroll
             
 .footer
     min-height: 120px
+    padding: 0 20px 0 20px
     &__inner
         &::before
             content: ""
@@ -209,8 +260,8 @@ body.no-scroll
             font-size: 18px
             font-weight: 600
     &__img
-        min-width: 100%
-        height: auto
+        max-width: 50%
+        display: none
     &__inner
         display: flex
         justify-content: center
@@ -220,12 +271,15 @@ body.no-scroll
         position: relative
         max-width: 550px
         width: 100%
-        padding: 25px
+        padding: 20px
         background-color: #fff
         opacity: 0
-
         transform: translateY(-100px)
         transition: transform 0.4s ease-out, opacity 0.4s ease-out
+    &__size
+        display: flex
+        width: 100%
+        padding: 10px 0 10px 0
     &__close
         height: 20px
         width: 20px
@@ -245,6 +299,7 @@ body.no-scroll
         &:focus
             outline: none
     &__footer
+        padding-top: 25px
         &-title
             text-align: center
             margin: 0
@@ -267,19 +322,17 @@ body.no-scroll
 
 .sizetable
     margin: 0 auto
-    border: 1px solid #b3adad
-    max-width: 100%
-    height: auto
+    border: 1px solid rgba(219, 112, 147, 0.8)
     border-collapse: collapse
     &__header
         th
             font-size: 18px
-            border: 1px solid #b3adad
-            background: #ced4da
-            padding: 0 10px 0 10px
+            border: 1px solid rgba(219, 112, 147, 0.8)
+            background: rgba(255, 105, 180, 0.5)
+            padding: 0 10px 0 10px  
     &__body
         td
-            border: 1px solid #b3adad
+            border: 1px solid rgba(219, 112, 147, 0.8)
             text-align: center
             background: #ffffff
             color: #313030
