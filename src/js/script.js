@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Header class on scroll
-    let header = document.querySelector('#header'),
+    let header = document.querySelector('#headerInner'),
         nav = document.querySelector('#nav');
 
     headerScroll();
@@ -32,6 +32,16 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Burger nav
+
+    $('#navToggle').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).toggleClass('burger-active');
+        $('#nav').toggleClass('nav-show');
+        $('.burger__line').toggleClass('show');
+    });
 
     // Slick-slider, documentation: https://kenwheeler.github.io/slick/
     $('.preview__slider_wrapper').slick({

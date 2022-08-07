@@ -1,0 +1,116 @@
+@media (max-width: 1400px)
+    .promo
+        &__wrapper
+            svg
+                width: 150% !important
+                position: absolute !important
+                left: -25% !important
+                    
+@media (max-width: 991px)
+    .header
+        &__inner
+            background-color: rgba(0, 0, 0, 0.2)
+    .nav
+        width: 50%
+        padding: 30px
+        height: 100vh
+        flex-direction: column
+        overflow: auto
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        z-index: 10
+        transform: translateX(-100%)
+        transition: 0.4s transform, 0.4s background
+        &__link
+            padding: 10px 15px
+            width: 100%
+            margin: 0
+            &-arrow 
+                display: block
+                position: absolute
+                left: 130px
+                top: 30%
+            &-collections
+                &-list
+                    top: 30px
+                    left: 70px
+            &-logo
+                padding: 10px 0
+                margin-right: 15px
+            &::after
+                display: none
+        &-show
+            transform: translateX(0)
+            background-color: #fff
+            .nav__link
+                a
+                    color: #000
+                svg
+                    fill: #000
+
+    .burger
+        display: block
+        &__line
+            transition: width 0.2s ease-out, transform 0.4s ease-out
+            &:nth-child(1)
+                width: 100%
+            &:nth-child(4)
+                width: 100%
+        &__line.show
+            background-color: #000
+            transition: width 0.2s ease-out, transform 0.4s ease-out
+            &:nth-child(1)
+                width: 0
+            &:nth-child(2)
+                position: absolute
+                transform: rotate(45deg)
+                left: 0
+                top: 50%
+                transform-origin: center
+            &:nth-child(3)
+                position: absolute
+                transform: rotate(-45deg)
+                left: 0
+                top: 50%
+                transform-origin: center
+            &:nth-child(4)
+                width: 0
+
+    .describe
+        &__img
+            margin: 0 auto
+
+@media (max-width: 767px)
+    .promo
+        &__header
+            font-size: 70px
+        &__wrapper
+            svg
+                width: 200% !important
+                position: absolute !important
+                left: -50% !important
+
+@media (max-width: 540px)
+    .promo
+        &__header
+            font-size: 60px
+    .nav
+        width: 80%
+    .promo
+        &__wrapper
+            svg
+                width: 300% !important
+                position: absolute !important
+                left: -100% !important
+
+@media (max-width: 425px)
+    .promo
+        &__header
+            font-size: 50px
+
+@media (max-width: 320px)
+    .promo
+        &__header
+            font-size: 40px

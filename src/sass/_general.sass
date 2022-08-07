@@ -8,7 +8,7 @@ a
     position: relative
     &__inner
         position: fixed
-        height: 90px
+        height: 86px
         width: 100%
         top: 0
         left: 0
@@ -29,6 +29,10 @@ a
         text-transform: uppercase
         text-decoration: none
         margin-right: 45px
+        &-arrow
+            display: none
+            width: 15px
+            height: 15px
         a
             transition: color 0.4s linear
             color: #fff
@@ -47,7 +51,7 @@ a
                 height: auto
                 text-align: center
                 li
-                    padding: 10px 40px 10px 40px
+                    padding: 10px 30px 10px 30px
             @include list_hover
         svg
             display: block
@@ -61,6 +65,29 @@ a
     @include nav_hover
     @include nav_active
 
+.burger
+    display: none
+    position: relative
+    height: 23px
+    width: 30px
+    background: none
+    font-size: 0
+    color: transparent
+    border: none
+    padding: 0
+    z-index: 10
+    margin: 0
+    top: 30px
+    left: 45px
+    &__line
+        display: block
+        width: 30px
+        height: 2px
+        margin: 3px 0
+        background-color: #fff
+    &:focus
+        outline: none
+    
 .promo
     position: relative
     top: -40px
@@ -78,16 +105,11 @@ a
             position: absolute
             z-index: -1
     &__header
-        position: absolute
-        top: 45%
-        transform: translateY(-45%)
-        left: 50%
-        transform: translateX(-50%)
+        text-align: center
+        padding-top: 400px
         font-size: 90px
         color: #fff
         text-transform: uppercase
-        
-        
 
 .describe
     min-height: 450px
@@ -131,6 +153,7 @@ a
             width: 100%
         &-buy 
             display: flex
+            flex-wrap: wrap
             margin-bottom: 20px
         &-title 
             font-size: 24px
@@ -140,7 +163,7 @@ a
             font-weight: 600
         &-purchase
             display: flex
-            margin-right: 10px
+            width: 100%
             &_img
                 padding: 5px 5px 5px 5px
                 height: 30px
@@ -150,7 +173,7 @@ a
                 font-weight: 400
         &-heart 
             display: flex
-            margin-left: 10px
+            width: 100%
             &_img
                 padding: 5px 5px 5px 5px
                 height: 30px
@@ -165,7 +188,6 @@ a
     &__title
         font-size: 24px
         font-weight: 600
-        margin-bottom: 20px
     &__wrapper
         display: flex
         flex-wrap: wrap
@@ -175,6 +197,32 @@ a
     &__img
         height: auto
         width: 100%
+    &__price
+        font-size: 22px
+        font-weight: 600
+    &__buy
+        display: flex
+        margin-bottom: 20px
+    &__purchase
+        display: flex
+        width: 50%
+        &_img
+            padding: 5px 5px 5px 5px
+            height: 30px
+            width: 30px
+        &_subtitle
+            font-size: 20px
+            font-weight: 400
+    &__heart
+        display: flex
+        width: 50%
+        &_img
+            padding: 5px 5px 5px 5px
+            height: 30px
+            width: 30px
+        &_subtitle
+            font-size: 20px
+            font-weight: 400
  
 .help
     min-height: 250px
@@ -189,7 +237,6 @@ a
             display: flex
             flex-wrap: wrap
             justify-content: center
-            margin: 0 60px 0 60px
             width: 120px
             height: 120px
     &__img

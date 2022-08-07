@@ -125,12 +125,13 @@
 
     <header class="header" id="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header__inner" id="headerInner">
                 <ul class="nav" id="nav">
                     <li class="nav__link nav__link-logo"><a href="index.html"><svg><use xlink:href="#logo-company"></use></svg></a></li>
-                    <li  class="nav__link nav__link-collections"><a href="collections.html">Collections</a>
+                    <li  class="nav__link nav__link-collections"><a href="collections.html">Collections</a> 
+                    <img class="nav__link-arrow" src="icons/down-arrow.svg" alt="">
                     <ul class="nav__link-collections-list">
-                        <li><a href="#">Lorem ipsum</a></li>
+                        <li><a href="collections-1.html">Collections 1</a></li>
                         <li><a href="#">Lorem ipsum</a></li>
                         <li><a href="#">Lorem ipsum</a></li>
                         <li><a href="#">Lorem ipsum</a></li>
@@ -142,6 +143,12 @@
                     <li class="nav__link"><a href="#">About us</a></li>
                     <li class="nav__link"><a href="#">Contacts</a></li>
                 </ul> <!-- /.nav -->
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__line">1</span>
+                    <span class="burger__line">2</span>
+                    <span class="burger__line">3</span>
+                    <span class="burger__line">4</span>
+                </button>
             </div> <!-- /.header__inner -->
         </div> <!-- /.container -->
     </header> <!-- /.header --> 
@@ -155,10 +162,10 @@
     <section class="describe">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <img class="describe__img" src="img/describe-photo.jpg" alt="describe-photo">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="describe__wrapper">
                         <h3 class="describe__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
                         <div class="describe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, elit eu faucibus placerat, nibh nulla sagittis ipsum, ut interdum est erat at orci. Proin in tellus sit amet magna mattis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse et pellentesque sapien. Donec libero nisi, posuere ut nibh et, ultricies sagittis massa. Vestibulum tincidunt justo id nisl fermentum fermentum. Suspendisse gravida eget est id auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, elit eu faucibus placerat, nibh nulla sagittis ipsum, ut interdum est erat at orci. Proin in tellus sit amet magna mattis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse et pellentesque sapien. Donec libero nisi, posuere ut nibh et, ultricies sagittis massa.  </div>
@@ -283,13 +290,13 @@
             <h3 class="help__title">How we can help you?</h3>
             <div class="help__inner">
                 <div class="row">
-                    <div class="col-md-3 offset-md-1">
+                    <div class="col-6">
                         <div class="help__inner-item">
                             <svg class="help__img help__img-phone"><use xlink:href="#phone-logo"></use></svg>
                             <a class="help__btn help__btn-phone" target="_blank" href="https://api.whatsapp.com/send/?phone=380500194819&text=Hello%2C+i+have+a+question+about">Question</a>
                         </div>
                     </div>
-                    <div class="col-md-3 offset-md-1">
+                    <div class="col-6">
                         <div class="help__inner-item">
                             <svg class="help__img help__img-dress"><use xlink:href="#dress-logo"></use></svg>
                             <button type="button" data-modal="#modalHelp" class="help__btn help__btn-size">Size chart</button>
