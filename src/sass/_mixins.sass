@@ -6,6 +6,8 @@
                 color: #000
             svg
                 fill: #000
+        .dropdown-toggle
+            color: #000
                 
 @mixin nav_active
     &-active 
@@ -15,6 +17,8 @@
                 color: #000
             svg
                 fill: #000
+        .dropdown-toggle
+            color: #000 
 
 @mixin link_underline
     &::after
@@ -29,15 +33,6 @@
     &-logo
         &::after
             display: none
-
-@mixin list_hover
-    &:hover
-        .nav__link-collections-list 
-            display: block
-            &:hover
-                display: block
-            a
-                @include link_underline
 
 @mixin any_title
     text-align: center

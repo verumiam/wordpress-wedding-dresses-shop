@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@100;400;500;600&display=swap" rel="stylesheet">
@@ -128,18 +129,19 @@
             <div class="header__inner" id="headerInner">
                 <ul class="nav" id="nav">
                     <li class="nav__link nav__link-logo"><a href="index.html"><svg><use xlink:href="#logo-company"></use></svg></a></li>
-                    <li  class="nav__link nav__link-collections"><a href="collections.html">Collections</a> 
-                    <img class="nav__link-arrow" src="icons/down-arrow.svg" alt="">
-                    <ul class="nav__link-collections-list">
-                        <li><a href="collections-1.html">Collections 1</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                    </ul></li>
+                    <div class="btn-group">
+                        <li class="nav__link"><a href="collections.html" role="button" class="btn">Collections</a></li>
+                        <button type="button" class="nav__link-btn btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="nav__link dropdown-item" href="collections-1.html">Collections 1</a></li>
+                          <li><a class="nav__link dropdown-item" href="#">Collections 2</a></li>
+                          <li><a class="nav__link dropdown-item" href="#">Collections 3</a></li>
+                        </ul>
+                      </div>
                     <li class="nav__link"><a href="#">Shopping cart</a></li>
-                    <li class="nav__link"><a href="#">Blog</a></li>
+                    <li class="nav__link"><a href="#">Favorite</a></li>
                     <li class="nav__link"><a href="#">About us</a></li>
                     <li class="nav__link"><a href="#">Contacts</a></li>
                 </ul> <!-- /.nav -->
@@ -163,10 +165,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <img class="describe__img" src="img/describe-photo.jpg" alt="describe-photo">
+                    <img class="describe__img" data-aos-delay="50"  data-aos-anchor=".describe" data-aos="fade-right" src="img/describe-photo.jpg" alt="describe-photo">
                 </div>
                 <div class="col-md-12 col-lg-6">
-                    <div class="describe__wrapper">
+                    <div class="describe__wrapper" data-aos-delay="50"  data-aos-anchor=".describe" data-aos="fade-left">
                         <h3 class="describe__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
                         <div class="describe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, elit eu faucibus placerat, nibh nulla sagittis ipsum, ut interdum est erat at orci. Proin in tellus sit amet magna mattis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse et pellentesque sapien. Donec libero nisi, posuere ut nibh et, ultricies sagittis massa. Vestibulum tincidunt justo id nisl fermentum fermentum. Suspendisse gravida eget est id auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, elit eu faucibus placerat, nibh nulla sagittis ipsum, ut interdum est erat at orci. Proin in tellus sit amet magna mattis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse et pellentesque sapien. Donec libero nisi, posuere ut nibh et, ultricies sagittis massa.  </div>
                     </div>
@@ -175,7 +177,7 @@
         </div> <!-- /.container -->
     </section> <!-- /.describe -->
 
-    <section class="preview">
+    <section class="preview" data-aos-anchor=".preview" data-aos-delay="50" data-aos="fade-up">
         <div class="container-fluid">
             <h3 class="preview__title">New collection "Lorem Ipsum"</h3>
             <div class="preview__slider">
@@ -470,6 +472,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
     <script src="js/script.js" type="text/javascript"></script>
 </body>

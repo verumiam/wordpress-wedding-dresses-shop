@@ -3,6 +3,30 @@ body.no-scroll
 
 a
     text-decoration: none
+
+.btn-group
+    display: flex
+    justify-content: center
+    align-items: center
+
+.dropdown-menu
+    padding: 10px 15px
+    text-align: center
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    border-radius: 0
+    transform: translate(145px, 60px)
+    .dropdown-item
+        color: #000
+        background: none
+        padding: 5px 0
+        font-weight: 600
+        font-size: 15px
+        margin: 0
+.dropdown-toggle
+    padding: 20px 15px
+    display: flex
+    color: #fff
+    transition: color 0.4s linear
     
 .header
     position: relative
@@ -19,16 +43,17 @@ a
     display: flex
     justify-content: center
     align-items: center
-    padding: 30px 70px
+    padding: 24px 70px
     transition: background-color 0.4s linear
     background-color: none
     list-style: none
     &__link
-        font-size: 15px
-        font-weight: 600
         text-transform: uppercase
         text-decoration: none
-        margin-right: 45px
+        margin-left: 40px
+        padding: 0
+        &-btn 
+            border: 0
         &-arrow
             display: none
             width: 15px
@@ -36,31 +61,18 @@ a
         a
             transition: color 0.4s linear
             color: #fff
-        &-collections
-            position: relative
-            &-list
-                display: none
-                position: absolute
-                background-color: #fff 
-                list-style: none
-                padding: 10px
-                top: 24px
-                left: 50%
-                transform: translateX(-50%)
-                min-width: 200px
-                height: auto
-                text-align: center
-                li
-                    padding: 10px 30px 10px 30px
-            @include list_hover
+            border: none
+            padding: 0
+            font-size: 15px
+            font-weight: 600 
+        &-logo
+            margin-left: 0
         svg
             display: block
             width: 170px    
             height: 26px
             fill: #fff
             transition: fill 0.4s linear
-        &:last-child
-            margin-right: 0
         @include link_underline
     @include nav_hover
     @include nav_active
@@ -115,6 +127,7 @@ a
     min-height: 450px
     padding: 0 0 70px 0
     display: flex
+    overflow-x: hidden
     &__img
         display: block
         height: auto
@@ -182,7 +195,7 @@ a
                 font-size: 20px
                 font-weight: 400
 
-.content
+.catalog
     min-height: 450px
     padding: 0 20px 0 20px
     &__title
@@ -200,30 +213,42 @@ a
     &__price
         font-size: 22px
         font-weight: 600
+        margin-bottom: 10px
     &__buy
         display: flex
         margin-bottom: 20px
     &__purchase
         display: flex
+        align-items: center
+        padding: 0 10px
         width: 50%
         &_img
-            padding: 5px 5px 5px 5px
-            height: 30px
-            width: 30px
-        &_subtitle
-            font-size: 20px
-            font-weight: 400
+            height: 20px
+            width: 20px
     &__heart
         display: flex
+        align-items: center
+        padding: 0 10px
         width: 50%
         &_img
-            padding: 5px 5px 5px 5px
-            height: 30px
-            width: 30px
-        &_subtitle
-            font-size: 20px
-            font-weight: 400
- 
+            height: 20px
+            width: 20px
+    &-btn
+        display: block
+        text-decoration: none        
+        border: 0
+        background: none
+        text-align: center
+        font-size: 20px
+        font-weight: 400
+        color: #000
+        width: 100%
+        padding: 5px 0 5px 0
+        transition: all 0.4s linear
+        &:hover
+            background: #000
+            color: #fff
+    
 .help
     min-height: 250px
     padding: 0 0 70px 0

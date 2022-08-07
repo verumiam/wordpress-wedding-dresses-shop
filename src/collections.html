@@ -91,18 +91,19 @@
             <div class="header__inner" id="headerInner">
                 <ul class="nav" id="nav">
                     <li class="nav__link nav__link-logo"><a href="index.html"><svg><use xlink:href="#logo-company"></use></svg></a></li>
-                    <li  class="nav__link nav__link-collections"><a href="collections.html">Collections</a>
-                    <img class="nav__link-arrow" src="icons/down-arrow.svg" alt="">
-                    <ul class="nav__link-collections-list">
-                        <li><a href="collections-1.html">Collections 1</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                        <li><a href="#">Lorem ipsum</a></li>
-                    </ul></li>
+                    <div class="btn-group">
+                        <li class="nav__link"><a href="collections.html" role="button" class="btn">Collections</a></li>
+                        <button type="button" class="nav__link-btn btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="nav__link dropdown-item" href="collections-1.html">Collections 1</a></li>
+                          <li><a class="nav__link dropdown-item" href="#">Collections 2</a></li>
+                          <li><a class="nav__link dropdown-item" href="#">Collections 3</a></li>
+                        </ul>
+                      </div>
                     <li class="nav__link"><a href="#">Shopping cart</a></li>
-                    <li class="nav__link"><a href="#">Blog</a></li>
+                    <li class="nav__link"><a href="#">Favorite</a></li>
                     <li class="nav__link"><a href="#">About us</a></li>
                     <li class="nav__link"><a href="#">Contacts</a></li>
                 </ul> <!-- /.nav -->
@@ -123,44 +124,44 @@
         </div> <!-- /.promo__wrapper -->
     </section> <!-- /.promo -->
 
-    <section class="content">
+    <section class="catalog">
         <div class="container-fluid">
             <div class="row">
-                <div class="content__wrapper">
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href="collections-1.html"><img src="img/slider/slider-1.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Collections 1 <p></p></div>
+                <div class="catalog__wrapper">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href="collections-1.html"><img src="img/slider/slider-1.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Collections 1 <p></p></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href=""><img src="img/slider/slider-2.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Lorem ipsum <p></p></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href=""><img src="img/slider/slider-2.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Lorem ipsum <p></p></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href=""><img src="img/slider/slider-3.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Lorem ipsum <p></p></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href=""><img src="img/slider/slider-3.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Lorem ipsum <p></p></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href=""><img src="img/slider/slider-4.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Lorem ipsum <p></p></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href=""><img src="img/slider/slider-4.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Lorem ipsum <p></p></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href=""><img src="img/slider/slider-5.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Lorem ipsum <p></p></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href=""><img src="img/slider/slider-5.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Lorem ipsum <p></p></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="content__item">
-                            <a href=""><img src="img/slider/slider-6.jpg" alt="" class="content__img"></a>
-                            <div class="content__title">Lorem ipsum <p></p></div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                        <div class="catalog__item">
+                            <a href=""><img src="img/slider/slider-6.jpg" alt="" class="catalog__img"></a>
+                            <div class="catalog__title">Lorem ipsum <p></p></div>
                         </div>
                     </div>
                 </div>
@@ -168,18 +169,18 @@
         </div>
     </section>
 
-    <!-- <div class="content__item">
-        <img src="img/slider/slider-3.jpg" alt="" class="content__img">
-        <div class="content__title">Lorem ipsum</div>
-        <div class="content__price">499&#8364</div>
-        <div class="content__buy">
-            <div class="content__purchase">
-                <div class="content__purchase-subtitle">Add to cart</div>
-                <img class="content__purchase-img" src="icons/purchase-buy.svg"></img>
+    <!-- <div class="catalog__item">
+        <img src="img/slider/slider-3.jpg" alt="" class="catalog__img">
+        <div class="catalog__title">Lorem ipsum</div>
+        <div class="catalog__price">499&#8364</div>
+        <div class="catalog__buy">
+            <div class="catalog__purchase">
+                <div class="catalog__purchase-subtitle">Add to cart</div>
+                <img class="catalog__purchase-img" src="icons/purchase-buy.svg"></img>
             </div>
-            <div class="content__heart">
-                <div class="content__heart-subtitle">Add to favorite</div>
-                <img class="content__heart-img" src="icons/purchase-heart.svg"></img>
+            <div class="catalog__heart">
+                <div class="catalog__heart-subtitle">Add to favorite</div>
+                <img class="catalog__heart-img" src="icons/purchase-heart.svg"></img>
             </div>
         </div>
     </div> -->
