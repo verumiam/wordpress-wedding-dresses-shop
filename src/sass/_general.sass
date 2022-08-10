@@ -52,6 +52,16 @@ a
         text-decoration: none
         margin-left: 40px
         padding: 0
+        &-order 
+            padding: 0
+            background: none
+            text-transform: uppercase
+            text-decoration: none
+            border: 0
+            color: #fff
+            font-size: 15px
+            font-weight: 600 
+            transition: color 0.4s linear
         &-btn 
             border: 0
         &-arrow
@@ -287,6 +297,18 @@ a
         width: 100%
         padding: 5px 0 5px 0
         transition: all 0.4s linear
+        &-error
+            width: 50%
+            margin: 0 auto
+            &:hover
+                background: #000
+                color: #fff
+        &-cart
+            width: 50%
+            margin: 0 auto
+            &:hover
+                background: #000
+                color: #fff
         &:focus
                 outline: none
         &-phone
@@ -318,6 +340,54 @@ a
         &-inst
             margin-right: 5px
 
+.popup
+    display: none
+    padding: 30px 15px
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+    background-color: rgba(0,0,0, 0.9)
+    overflow: auto
+    &__inner
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 100%
+    &__content
+        position: relative
+        max-width: 900px
+        width: 100%
+        padding: 20px
+        background-color: #fff
+        opacity: 0
+        transform: translateY(-100px)
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out
+    &__close
+        height: 20px
+        width: 20px
+        background: none
+        border: none
+        padding: 0
+        cursor: pointer
+        position: absolute
+        top: 10px
+        right: 10px
+        z-index: 1
+        transition: transform 0.2s linear
+        img
+            display: block
+        &:hover
+            transform: rotate(90deg)
+        &:focus
+            outline: none
+    &-show
+        display: block
+    &__title, &__subtitle
+        text-align: center
+       
 .modal
     display: none
     width: 100%
@@ -422,7 +492,7 @@ a
             font-family: 'Montserrat', sans-serif
 
 .cart
-    min-height: 450px
+    min-height: 150px
     padding: 0 20px 0 20px
     font-weight: 600
     margin-bottom: 30px
@@ -430,6 +500,10 @@ a
     &__title
         @include any_title
         margin-bottom: 30px
+    &__subtitle
+        @include any_subtitle
+    &__empty
+        display: none
     &__items
         &::before
             content: ""
@@ -440,8 +514,10 @@ a
             margin-bottom: 30px
     &__item
         margin-bottom: 30px
-        &-quantity
-            font-size: 20px
+        &-img 
+            &-wrapper
+                max-width: 400px
+                height: auto
         &::after
             content: ""
             display: block
@@ -450,7 +526,7 @@ a
             height: 1px
             margin-top: 30px
         &-btn
-            padding: 10px 50px
+            padding: 0
             display: block
             text-decoration: none        
             border: 0
@@ -469,22 +545,17 @@ a
                 color: #fff
             &-minus,&-plus
                 border: none
-                padding: 5px 10px
+                padding: 10px
                 margin: 0 15px
                 background: none
                 img
+                    pointer-events: none
                     height: 20px
                     width: 20px
         &-descr
             text-align: center
-        &-title
-            font-size: 20px
         &-attribute
-            font-size: 20px
             margin: 0 25px
-        &-price
-            font-size: 20px
-            margin-left: 25px
         &-img
             max-width: 100%
             height: auto
@@ -493,3 +564,57 @@ a
     &__form
         &-btn
             margin-top: 20px
+    &__btn
+        position: fixed
+        bottom: 130px
+        right: 30px
+        background: #ced4da 
+        width: 60px
+        height: 60px
+        border: 0
+        border-radius: 50%
+        cursor: pointer
+        z-index: 100
+        box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.15)
+        transition: transform 0.4s, opacity 0.4s 
+        padding: 0
+        &:hover
+            transform: scale(1.1)
+            .cart__btn-icon
+                fill: rgba(219, 112, 147, 0.8)
+        &:active
+            opacity: 0.6
+            transform: scale(1)
+        &-counter
+            position: absolute
+            top: 0
+            right: 0
+            transform: translate(0, -10px)
+            background: #000
+            min-width: 30px
+            height: 30px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            padding: 5px
+            align-items: center
+            color: #fff
+            font-weight: 700
+            font-size: 20px
+        &-icon 
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 30px
+            width: 30px
+            transition: fill 0.4s
+
+
+
+.js-cart-wrapper.is-empty .cart__empty
+    display: block 
+
+.js-cart-wrapper.is-empty .cart__form
+    display: none
+

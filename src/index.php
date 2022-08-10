@@ -124,23 +124,38 @@
         </symbol>
     </svg>
 
+    <svg display="none">    
+            <symbol id="cart-btn" viewBox="0 0 50.000000 50.000000">
+                <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+                stroke="none">
+                <path d="M0 460 c0 -13 7 -20 20 -20 11 0 20 5 20 10 0 15 47 12 63 -5 8 -8
+                32 -85 52 -172 20 -87 43 -171 51 -188 7 -16 14 -41 16 -55 3 -21 8 -25 38
+                -25 31 0 35 3 38 28 3 21 9 27 27 27 18 0 24 -6 27 -27 3 -25 7 -28 38 -28 33
+                0 35 2 35 35 l0 35 -92 5 c-50 3 -94 7 -96 10 -2 3 -8 15 -11 27 -7 22 -5 22
+                90 25 l97 3 33 85 c50 130 60 120 -120 120 l-154 0 -19 63 -19 62 -67 3 c-62
+                3 -67 1 -67 -18z m423 -197 c-14 -38 -28 -76 -30 -85 -5 -15 -18 -18 -92 -18
+                l-87 0 -21 85 -20 85 138 0 138 0 -26 -67z"/>
+                </g>
+            </symbol>
+        </svg>
+
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner" id="headerInner">
                 <ul class="nav" id="nav">
-                    <li class="nav__link nav__link-logo"><a href="index.html"><svg><use xlink:href="#logo-company"></use></svg></a></li>
+                    <li class="nav__link nav__link-logo"><a href="index.php"><svg><use xlink:href="#logo-company"></use></svg></a></li>
                     <div class="btn-group">
-                        <li class="nav__link"><a href="collections.html" role="button" class="btn">Collections</a></li>
+                        <li class="nav__link"><a href="collections.php" role="button" class="btn">Collections</a></li>
                         <button type="button" class="nav__link-btn btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                           <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="nav__link dropdown-item" href="collections-1.html">Collections 1</a></li>
+                          <li><a class="nav__link dropdown-item" href="collections-1.php">Collections 1</a></li>
                           <li><a class="nav__link dropdown-item" href="#">Collections 2</a></li>
                           <li><a class="nav__link dropdown-item" href="#">Collections 3</a></li>
                         </ul>
                       </div>
-                    <li class="nav__link"><a href="#">Shopping cart</a></li>
+                    <li class="nav__link"><button class="nav__link-order" data-popup=".popup-order">Shopping cart</button></li>
                     <li class="nav__link"><a href="#">Favorite</a></li>
                     <li class="nav__link"><a href="#">About us</a></li>
                     <li class="nav__link"><a href="#">Contacts</a></li>
@@ -328,6 +343,94 @@
             </div> <!-- /.footer__inner -->
         </div> <!-- /.container -->
     </footer> <!-- /.footer -->
+
+    <!-- popup-order -->
+    <div>
+            <div class="popup popup-order">
+                <div class="popup__inner">
+                    <div class="popup__content">
+                    <button class="popup__close" data-popup-close><img src="icons/close.svg" type="button" alt="close"></button>
+                    <div class="cart js-cart-wrapper">
+                            <div class="cart__title">Shopping cart</div>
+                            <div class="cart__subtitle cart__empty">No products</div>
+                            <div class="container">
+                                <div class="row">
+                                    <form class="form cart__form" method="POST" action="/universe/src/collections-1.php">
+                                        <div class="cart__items js-cart"></div>
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="cart__totals">
+                                                <div>Total: <span class="cart__bold"><span class="js-cart-total-price"></span></span>&#8364;</div>
+                                            </div>
+                                            <div class="cart__totals-title text-center">Fill out the form</div>
+                                            <div class="form__main">
+                                                <input type="text" class="form__input input" name="Имя" placeholder="Name" required=''>
+                                                <input type="text" class="form__input input" name="Телефон" placeholder="Number" required=''>
+                                                <input type="text" class="form__input input" name="Адрес" placeholder="Address" required=''>
+                                                <input type="hidden" class="js-cart-total-price-input" name="Общая сумма">
+                                                <select name="Оплата" class="input">
+                                                    <option value="Оплата картой">Payment by card</option>
+                                                    <option value="Оплата переводом">Payment by transfer</option>
+                                                </select>
+                                                <button class="cart__form-btn catalog-btn" type="submit">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.popup-order -->
+
+         <!-- popup-add-cart -->
+         <div>
+            <div class="popup popup-add-cart">
+                <div class="popup__inner">
+                    <div class="popup__content">
+                        <button class="popup__close" data-popup-close><img src="icons/close.svg" type="button" alt="close"></button>
+                        <h2 class="popup__title">Great</h2>
+                        <p class="popup__subtitle">The product has been added to the cart</p>
+                        <button class="help__btn help__btn-cart" data-popup-close>Continue shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.popup-add-cart -->
+
+        <!-- popup-thanks -->
+        <div>
+            <div class="popup popup-thanks">
+                <div class="popup__inner">
+                    <div class="popup__content">
+                        <button class="popup__close" data-popup-close><img src="icons/close.svg" type="button" alt="close"></button>
+                        <h2 class="popup__title">Your order has been accepted</h2>
+                        <p class="popup__subtitle">The manager will contact you shortly to clarify the details of the order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.popup-thanks -->
+
+        <!-- popup-error -->
+        <div>
+            <div class="popup popup-error">
+                <div class="popup__inner">
+                    <div class="popup__content">
+                        <button class="popup__close" data-popup-close><img src="icons/close.svg" type="button" alt="close"></button>
+                        <h2 class="popup__title">An error has occurred</h2>
+                        <a class="help__btn help__btn-error" target="_blank" href="https://api.whatsapp.com/send/?phone=380500194819&text=Hello%2C+i+have+a+question+about">Contact the manager on whatsapp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.popup-error -->
+
+        <button class="cart__btn" data-popup=".popup-order">
+            <span class="cart__btn-counter js-cart-total-count-items">0</span>
+            <svg class="cart__btn-icon"><use xlink:href="#cart-btn"></use></svg>
+        </button>
 
     <div class="modal" id="modalHelp">
         <div class="modal__inner">

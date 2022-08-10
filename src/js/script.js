@@ -129,37 +129,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 300);
     };
 
-    // Help with size
-
-    // Converting size properties into JSON list
-    // const formBtn = document.querySelector('#helpBtn'),
-    //       formSize = document.querySelector('#formSize');
-
-    // formBtn.addEventListener('click', function() {
-    //     let inputBust = document.querySelector('.input--bust'),
-    //         inputWaist = document.querySelector('.input--waist'),
-    //         inputHips = document.querySelector('.input--hips');
-
-    //     function formSize(obj) {
-    //         this.bust = obj.bust;
-    //         this.waist = obj.waist;
-    //         this.hips = obj.hips;
-    //     }
-
-    //     let bust = inputBust.value,
-    //         waist = inputWaist.value,
-    //         hips = inputHips.value;
-
-    //     let sizes = new formSize({
-    //         bust: bust,
-    //         waist: waist,
-    //         hips: hips
-    //     });
-
-    //     console.log(JSON.stringify(sizes));
-        
-    // });
-
     const cartDomElement = document.querySelector('.js-cart');
 
     if(!cartDomElement) {
@@ -170,6 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const cartItemsCounterDOMElement = document.querySelector('.js-cart-total-count-items');        
     const cartTotalPriceDOMElement = document.querySelector('.js-cart-total-price');
     const cartTotalPriceInputDOMElement = document.querySelector('.js-cart-total-price-input');
+    const cartWrapperDOMElement = document.querySelector('.js-cart-wrapper');
 
     const renderCartItem = ({id, name, attribute, src, price, quantity}) => {
         const cartItemDOMElement = document.createElement('div');
@@ -181,11 +151,6 @@ window.addEventListener('DOMContentLoaded', () => {
         const cartItemTemplate = `
             <div class="cart-item cart__item">
             <div class="cart__item-main d-flex justify-content-center flex-wrap align-items-center">
-                <div class="col-md-3">
-                    <div class="cart__item-start">
-                        <button type="button" class="cart__item-btn cart__item-btn--remove js-btn-cart__item-remove">Remove</button>
-                    </div>
-                </div>
                 <div class="col-md-3">
                     <div class="cart__item-img-wrapper">
                         <img src="${src}" alt="" class="cart__item-img">
@@ -201,13 +166,18 @@ window.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="cart__item-end">
+                    <div class="cart__item-start">
                         <div class="cart__item-actions d-flex flex-nowrap align-items-center justify-content-center">
                             <button type="button" class="cart__item-btn-minus js-btn-product-dec-quantity"><img src="icons/minus.svg" alt=""></button>
                             <span class="cart__item-quantity js-cart__item-quantity">${quantity}</span>
                             <button type="button" class="cart__item-btn-plus js-btn-product-inc-quantity"><img src="icons/plus.svg" alt=""></button>
                             <div class="cart__item-price"><span class="js-cart__item-price">${price * quantity}</span>&#8364</div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cart__item-end">
+                        <button type="button" class="cart__item-btn cart__item-btn--remove js-btn-cart__item-remove">Remove</button>
                     </div>
                 </div>
             </div>
@@ -248,13 +218,20 @@ window.addEventListener('DOMContentLoaded', () => {
         if (cartItemsCounterDOMElement) {
             cartItemsCounterDOMElement.textContent = totalQuantity;
         }
+
+        return totalQuantity;
     }
 
     const updateCart = () => {
-        console.log(cart);
+        const totalQuantity = updateCartTotalItemsCounter();
         updateCartTotalPrice();
-        updateCartTotalItemsCounter();
         saveCart();
+
+        if (totalQuantity === 0) {
+            cartWrapperDOMElement.classList.add('is-empty');
+        } else {
+            cartWrapperDOMElement.classList.remove('is-empty');
+        }
     };
 
     const deleteCartItem = (id) => {
@@ -377,6 +354,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
             }
         });
+    };
+
+    // Modal help with size of the wedding dress
+    
+    // Function popup open with animation
+    $('[data-popup]').on('click', function(e) {
+        e.preventDefault();
+
+        let popup = $(this).data('popup');
+        $('body').addClass('no-scroll');
+        $(popup).addClass('popup-show');
+
+        setTimeout(function() {
+            $(popup).find('.popup__content').css({
+                transform: 'translateY(0)',
+                opacity: '1'
+            });
+        });
+    });
+
+    $('body').mouseup(function(e) {
+        let popupInner = $(".popup__inner");
+        let popup = $('.popup');
+        
+        if (popupInner.has(e.target).length === 0){
+            $('body').removeClass('no-scroll');
+            popup.removeClass('popup-show');
+        }
+    });
+    
+
+    // Popup close with animation
+    $('[data-popup-close]').on('click', function(e) {
+        e.preventDefault();
+
+        let popup = $(this).parents('.popup');
+        popupClose(popup);
+    });
+
+    function popupClose(popup) {
+        popup.find('.popup__content').css({
+            transform: 'translateY(-100px)',
+            opacity: '0'
+        });
+
+        setTimeout(function() {
+            $('body').removeClass('no-scroll');
+            popup.removeClass('popup-show');
+        }, 300);
     };
 
     cartInit();

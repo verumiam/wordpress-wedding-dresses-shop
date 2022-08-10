@@ -4,13 +4,17 @@ const sass = require('gulp-sass')(require('sass'));
 const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const connect = require('gulp-connect-php');
+
 
 gulp.task('server', function() {
-    browserSync.init({
-        server: {
-            baseDir: "src"
-        }
+    connect.server({}, function (){
+        browserSync({
+            proxy: 'http://localhost/universe/src/',
+            notify: false 
+        });
     });
+    
 });
 
 gulp.task('styles', function() {
@@ -31,7 +35,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
     gulp.watch("src/sass/*.+(scss|sass)", gulp.parallel("styles"));
     gulp.watch("src/*.html").on("change", browserSync.reload);
-    gulp.watch("src/*.js").on("change", browserSync.reload);
+    gulp.watch("src/*.php").on("change", browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
